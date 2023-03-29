@@ -1,0 +1,46 @@
+﻿@model List<MvcBlog.Models.TblType>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>BLOG TÜR LİSTESİ</h4>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Tür</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th style="width:100px;">@item.TypeId</th>
+            <td>@item.TypeName</td>
+            <td style="width:150px;"><a href="/Type/DeleteType/@item.TypeId/" class="btn btn-outline-danger"> Sil</a></td>
+            <td style="width:150px;"><a href="/Type/UpdateType/@item.TypeId/" class="btn btn-outline-success"> Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+<button class="btn btn-outline-primary" data-toggle="modal" data-target="#Modal1">Tür Ekle</button>
+
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">TÜR EKLEME PANELİ</h4>
+            </div>
+            <form method="post" class="form-group" action="/Type/AddType/">
+                <div class="modal-body">
+                    <label>Tür Adı</label>
+                    <input type="text" class="form-control" name="TypeName" />
+                    <br />
+
+                    <button class="btn btn-outline-primary">Tür Ekle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

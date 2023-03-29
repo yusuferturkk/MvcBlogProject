@@ -1,0 +1,8 @@
+﻿@model List<MvcBlog.Models.TblComment>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li><a href="/Blog/BlogDetail/@item.BlogId">@item.Username: </a><a href="#"> @item.CommentContent.Substring(0,20) ...</a></li>
+    }
+</ul>

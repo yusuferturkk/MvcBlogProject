@@ -1,0 +1,8 @@
+﻿@model List<MvcBlog.Models.TblBlog>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li><a href="/Blog/BlogDetail/@item.BlogId">@item.BlogTitle</a></li>
+    }
+</ul>

@@ -1,0 +1,33 @@
+﻿@model MvcBlog.Models.TblBlog
+
+@{
+    ViewBag.Title = "UpdateBlog";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>BLOG GÜNCELLEME EKRANI</h4>
+<br />
+<form method="post" class="form-group">
+    @Html.HiddenFor(x => x.BlogId)
+    @Html.Label("Blog Başlık")
+    @Html.TextBoxFor(x => x.BlogTitle, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Blog İçerik")
+    @Html.TextBoxFor(x => x.BlogContent, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Resim")
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Blog Tür")
+    @Html.DropDownListFor(x => x.TypeId, (List<SelectListItem>)ViewBag.Types, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Blog Kategori")
+    @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.Categories, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-outline-primary">Blog Güncelle</button>
+</form>

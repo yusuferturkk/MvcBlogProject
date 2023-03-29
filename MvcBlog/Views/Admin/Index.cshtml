@@ -1,0 +1,27 @@
+﻿@model List<MvcBlog.Models.TblAdmin>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>ADMİN LİSTESİ</h4>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Kullanıcı Adı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.AdminId</th>
+            <td>@item.Username</td>            
+            <td><a href="/Admin/DeleteAdmin/@item.AdminId/" class="btn btn-outline-danger"> Sil</a></td>
+            <td><a href="/Admin/UpdateAdmin/@item.AdminId/" class="btn btn-outline-success"> Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+<td><a href="/Admin/AddAdmin/" class="btn btn-outline-primary"> Blog Ekle</a></td>

@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<body>
+    <!--/header-->
+    <div class="contact-content">
+        <div class="container">
+            <div class="contact-info">
+                <h2>İLETİŞİM</h2>
+                <p>Blog sayfamızda bulunan film ve dizilere eklemek istediklerinizi veya yorumlarda yaşayacağınız herhangi bir promblem olursa bu panelden bizlere mesaj gönderebilirsiniz. Mesaj gönderme sırasında mutlaka mail adresinizi doğru bir şekilde yazın ki sizlere bu mail üzerinden dönüş yapabilelim.</p>
+            </div>
+            <div class="contact-details">
+                @Html.Action("AddContact", "Contact")
+            </div>
+            <div class="contact-details">
+                <div class="col-md-6 contact-map">
+                    <h4>BİZİ BURADA BULABİLİRSİNİZ</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50036.74998737887!2d27.021105489650385!3d38.38838429085884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbdc3f593e08ab%3A0xe0c497f92491cc5c!2zQmFsw6dvdmEvxLB6bWly!5e0!3m2!1str!2str!4v1679959227511!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-6 company_address">
+                    <h4>BİZE ULAŞIN</h4>
+                    <p>Eğitim Mahallesi, Şükrü Tunar sokak</p><br />
+                    <p>Balçova - İzmir - Türkiye</p><br />
+                    <p>Telefon: +90 505 555 55 55</p><br />
+                    <p>Email: <a href="mailto:info@example.com">info@mycompany.com</a></p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+    <!---->
+</body>
+</html>
+
+

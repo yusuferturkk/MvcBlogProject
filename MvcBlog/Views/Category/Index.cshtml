@@ -1,0 +1,46 @@
+﻿@model List<MvcBlog.Models.TblCategory>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>KATEGORİ LİSTESİ</h4>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Kategori Adı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th style="width:100px;">@item.CategoryId</th>
+            <td>@item.CategoryName</td>
+            <td style="width:200px;"><a href="/Category/DeleteCategory/@item.CategoryId/" class="btn btn-outline-danger"> Sil</a></td>
+            <td style="width:200px;"><a href="/Category/UpdateCategory/@item.CategoryId/" class="btn btn-outline-success"> Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+<button class="btn btn-outline-primary" data-toggle="modal" data-target="#Modal1">Kategori Ekle</button>
+
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">KATEGORİ EKLEME PANELİ</h4>
+            </div>
+            <form method="post" class="form-group" action="/Category/AddCategory/">
+                <div class="modal-body">
+                    <label>Kategori Adı</label>
+                    <input type="text" class="form-control" name="CategoryName" />
+                    <br />
+
+                    <button class="btn btn-outline-primary">Kategori Ekle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

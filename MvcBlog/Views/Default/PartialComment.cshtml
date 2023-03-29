@@ -1,0 +1,15 @@
+﻿@model List<MvcBlog.Models.TblComment>
+
+@foreach (var item in Model)
+{
+    <ul class="comment-list">
+        <li>
+            <div class="desc">
+                <img src="~/Templates/web/images/avatar.png" class="img-responsive" alt="">
+
+                <p><a href="#" title="Posts by admin" rel="author">@item.Username: </a></p> @item.CommentContent
+            </div>
+            <div class="clearfix"></div>
+        </li>
+    </ul>
+}

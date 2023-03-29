@@ -1,0 +1,32 @@
+﻿@model MvcBlog.Models.TblBlog
+
+@{
+    ViewBag.Title = "AddBlog";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>BLOG EKLEME EKRANI</h4>
+<br />
+<form method="post" class="form-group">
+    <label>Blog Başlık</label>
+    @Html.TextBoxFor(x => x.BlogTitle, new { @class = "form-control" })
+    <br />
+
+    <label>Blog İçerik</label>
+    @Html.TextBoxFor(x => x.BlogContent, new { @class = "form-control" })
+    <br />
+
+    <label>Resim</label>
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+    <br />
+
+    <label>Tür</label>
+    @Html.DropDownListFor(x => x.TypeId, (List<SelectListItem>)ViewBag.Types, new { @class = "form-control" })
+    <br />
+
+    <label>Kategori</label>
+    @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.Categories, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-outline-primary">Blog Ekle</button>
+</form>

@@ -1,0 +1,70 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Kullanıcı Admin Panel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Templates/sidebar-01/css/style.css">
+</head>
+<body>
+
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="p-4 pt-5">
+                <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(/Templates/sidebar-01/images/logo.jpg);"></a>
+                <ul class="list-unstyled components mb-5">
+                    <li class="active">
+                        <a href="/About/Index/">Hakkımda</a>
+                    </li>
+                    <li>
+                        <a href="/Category/Index/">Kategori</a>
+                    </li>
+                    <li>
+                        <a href="/Type/Index/">Blog Türü</a>
+                    </li>
+                    <li>
+                        <a href="/Blog/Index/">Bloglar</a>
+                    </li>
+                    <li>
+                        <a href="/Comment/Index/">Yorumlar</a>
+                    </li>
+                    <li>
+                        <a href="/Contact/Index/">İletişim</a>
+                    </li>
+                    <li>
+                        <a href="/Default/Index/">Siteye Git</a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Index/">Ayarlar</a>
+                    </li>
+                    <li>
+                        <a href="/Login/LogOut/">Çıkış Yap</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5">
+
+            @RenderBody()
+
+        </div>
+    </div>
+
+    <script src="~/Templates/sidebar-01/js/jquery.min.js"></script>
+    <script src="~/Templates/sidebar-01/js/popper.js"></script>
+    <script src="~/Templates/sidebar-01/js/bootstrap.min.js"></script>
+    <script src="~/Templates/sidebar-01/js/main.js"></script>
+</body>
+</html>

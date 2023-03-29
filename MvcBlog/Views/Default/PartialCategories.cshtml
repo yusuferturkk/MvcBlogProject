@@ -1,0 +1,8 @@
+﻿@model List<MvcBlog.Models.TblCategory>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li><a href="/Blog/BlogWithCategory/@item.CategoryId">@item.CategoryName</a></li>
+    }
+</ul>

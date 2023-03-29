@@ -1,0 +1,32 @@
+﻿@model List<MvcBlog.Models.TblContact>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>MESAJ LİSTESİ</h4>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>Email</th>
+        <th>Konu</th>
+        <th>Mesaj</th>
+        <th>Sil</th>
+        <th>Detay</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th style="width:100px;">@item.ContactId</th>
+            <td>@item.NameSurname</td>
+            <td>@item.Email</td>
+            <td>@item.Subject</td>
+            <td>@item.Message</td>
+            <td style="width:150px;"><a href="/Contact/DeleteContact/@item.ContactId/" class="btn btn-outline-danger"> Sil</a></td>
+            <td style="width:150px;"><a href="/Contact/DetailContact/@item.ContactId/" class="btn btn-outline-success"> Detay</a></td>
+        </tr>
+    }
+</table>

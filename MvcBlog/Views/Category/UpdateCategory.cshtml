@@ -1,0 +1,17 @@
+﻿@model MvcBlog.Models.TblCategory
+
+@{
+    ViewBag.Title = "UpdateCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>KATEGORİ GÜNCELLE</h4>
+<br />
+<form method="post" class="form-group">
+    @Html.HiddenFor(x => x.CategoryId)
+    @Html.Label("Kategori Adı")
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-outline-primary">Kategori Güncelle</button>
+</form>

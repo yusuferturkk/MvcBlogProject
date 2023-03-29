@@ -1,0 +1,32 @@
+﻿@model List<MvcBlog.Models.TblAbout>
+
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE HTML>
+<html>
+<body>
+    @foreach (var item in Model)
+    {
+        <div class="about-content">
+            <div class="container">
+                <div class="about-section">
+                    <div class="about-grid">
+                        <img style="width: 800px; display: block; margin:auto" src="@item.ImageUrl" alt="" />
+                        <p style="margin-top:50px;">@item.Description</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</body>
+</html>

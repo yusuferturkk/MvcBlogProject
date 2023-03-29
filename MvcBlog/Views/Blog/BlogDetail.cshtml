@@ -1,0 +1,52 @@
+﻿@model MvcBlog.Models.TblBlog
+
+@{
+    ViewBag.Title = "BlogDetail";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<body>
+    <div class="single">
+        <div class="container">
+            <div class="col-md-8 single-main">
+                <div class="single-grid">
+                    <img src="@Model.BlogImage" alt="" />
+                    <p>
+                        @Model.BlogContent
+                    </p>
+                </div>
+                @Html.Action("PartialComment", "Default")
+                @Html.Action("DoComment", "Comment")
+            </div>
+
+            <div class="col-md-4 side-content">
+                <div class="recent">
+                    <h3>SON PAYLAŞINLANLAR</h3>
+                    @Html.Action("PartialRecentPost", "Default")
+                </div>
+                <div class="comments">
+                    <h3>SON YORUMLAR</h3>
+                    @Html.Action("PartialRecentComment", "Default")
+                </div>
+                <div class="clearfix"></div>
+                <div class="categories">
+                    <h3>KATEGORİLER</h3>
+                    @Html.Action("PartialCategories", "Default")
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+

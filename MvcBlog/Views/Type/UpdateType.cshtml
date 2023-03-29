@@ -1,0 +1,17 @@
+﻿@model MvcBlog.Models.TblType
+
+@{
+    ViewBag.Title = "UpdateType";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>TÜR GÜNCELLEME EKRANI</h4>
+<br />
+<form method="post" class="form-group">
+    @Html.HiddenFor(x => x.TypeId)
+    @Html.Label("Tür Adı")
+    @Html.TextBoxFor(x => x.TypeName, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Tür Güncelle</button>
+</form>

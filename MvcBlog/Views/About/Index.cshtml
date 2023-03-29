@@ -1,0 +1,26 @@
+﻿@model List<MvcBlog.Models.TblAbout>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>HAKKIMDA</h4>
+<form method="post" class="form-group">
+    @foreach (var item in Model)
+    {
+        <label>Başlık</label>
+        <input type="text" name="Title" value="@item.Title" class="form-control" />
+        <br />
+
+        <label>Resim</label>
+        <input type="text" name="ImageUrl" value="@item.ImageUrl" class="form-control" />
+        <br />
+
+        <label>Açıklama</label>
+        <input type="text" name="Description" value="@item.Description" class="form-control" />
+        <br />
+    }
+
+        <button class="btn btn-outline-primary">Değişikliği Kaydet</button>
+</form>

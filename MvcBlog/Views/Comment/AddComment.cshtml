@@ -1,0 +1,28 @@
+﻿@model MvcBlog.Models.TblComment
+
+@{
+    ViewBag.Title = "AddComment";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>YORUM EKLEME EKRANI</h4>
+<br />
+<form method="post" class="form-group">
+    @Html.Label("Kullanıcı Adı")
+    @Html.TextBoxFor(x => x.Username, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Mail Adresi")
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Yorum İçerik")
+    @Html.TextBoxFor(x => x.CommentContent, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Yorum Yapılan Blog")
+    @Html.DropDownListFor(x => x.BlogId, (List<SelectListItem>)ViewBag.Blogs, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-outline-primary">Yorum Ekle</button>
+</form>

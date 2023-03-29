@@ -1,0 +1,33 @@
+﻿@model List<MvcBlog.Models.TblComment>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>YORUM LİSTESİ</h4>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Kullanıcı Adı</th>
+        <th>Email</th>
+        <th>İçerik</th>
+        <th>Blog</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th style="width:100px;">@item.CommentId</th>
+            <td>@item.Username</td>
+            <td>@item.Email</td>
+            <td>@item.CommentContent</td>
+            <td>@item.TblBlog.BlogTitle</td>
+            <td style="width:150px;"><a href="/Comment/DeleteComment/@item.BlogId/" class="btn btn-outline-danger"> Sil</a></td>
+            <td style="width:150px;"><a href="/Comment/UpdateComment/@item.BlogId/" class="btn btn-outline-success"> Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+<td><a href="/Comment/AddComment/" class="btn btn-outline-primary"> Yorum Ekle</a></td>

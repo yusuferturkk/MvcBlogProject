@@ -1,0 +1,31 @@
+﻿@model MvcBlog.Models.TblContact
+
+@{
+    ViewBag.Title = "DetailContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>MESAJ GÖRÜNTÜLEME</h4>
+<br />
+<form method="post" class="form-group">
+    @Html.HiddenFor(x => x.ContactId)
+    @Html.Label("Ad Soyad")
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Mail Adresi")
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Telefon")
+    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Konu")
+    @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Mesaj")
+    @Html.TextBoxFor(x => x.Message, new { @class = "form-control" })
+    <br />
+</form>

@@ -1,0 +1,33 @@
+﻿@model List<MvcBlog.Models.TblBlog>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>BLOG LİSTESİ</h4>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th style="width:700px;">İçerik</th>
+        <th>Tür</th>
+        <th>Kategori</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.BlogId</th>
+            <td>@item.BlogTitle</td>
+            <td>@item.BlogContent.Substring(0, 200) ...</td>
+            <td>@item.TblType.TypeName</td>
+            <td>@item.TblCategory.CategoryName</td>
+            <td><a href="/Blog/DeleteBlog/@item.BlogId/" class="btn btn-outline-danger"> Sil</a></td>
+            <td><a href="/Blog/UpdateBlog/@item.BlogId/" class="btn btn-outline-success"> Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+<td><a href="/Blog/AddBlog/" class="btn btn-outline-primary"> Blog Ekle</a></td>
