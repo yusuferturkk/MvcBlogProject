@@ -252,6 +252,7 @@
     <Content Include="Templates\BlogTemplate\images\image-6.jpg" />
     <Content Include="Templates\BlogTemplate\images\image-7.jpg" />
     <Content Include="Templates\BlogTemplate\images\image-8.jpg" />
+    <Content Include="Templates\BlogTemplate\images\image-9.jpg" />
     <Content Include="Templates\LoginTemplate\css\bootstrap.min.css" />
     <Content Include="Templates\LoginTemplate\css\bootstrap\mixins\_border-radius.css" />
     <Content Include="Templates\LoginTemplate\css\bootstrap\mixins\_reset-text.css" />
