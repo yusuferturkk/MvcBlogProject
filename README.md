@@ -2,13 +2,21 @@
 
 ## PROJE DETAYLARI
 
-* .Net Framework Mvc5 ile yazılmış SQL Server tabanlı dinamik bir Cv web sitesi.
+* .Net Framework Mvc5 ile yazılmış SQL Server tabanlı dinamik bir Blog web sitesi.
 * DbFirst yaklaşımını ele alınarak önce SQL Server'da tablolarımızı oluşturduk.
 * Oluşturduğumuz tabloları projemize Entity Data Model ile dahil ettik.
 * Repository Design Pattern ile Entity Framework ORM aracını kombine edip CRUD işlemleri gerçekleştirdik.
 * Admin panelimiz sayesinde site üzerindeki değişikliklerimizi arka planda yapabiliyoruz.
 * Fluent Validation ile eklenmek veya güncellenmek istenen verileri kontrolden geçiriyoruz.
-* İletişim sayfasından gönderilen mesajları admin panel üzerinden görüntüleyebiliyoruz.
+
+<br/>
+
+## PROJE İÇERİK
+* Admin panel üzerinden blog eklemesi yaparken kategori ve türleri DropDownList aracılığı ile çekiyoruz.
+* Kullanıcı düşüncelerini blogların altına yorum olarak bırakabiliyor ve daha önce yapılmış olan yorumları görebiliyor.
+* Sitemizde hızlı etkileşim olması için yan menümüzde son paylaşımlar, kategoriler ve son yapılan yorumlar yer alıyor.
+* Son paylaşımdan ilgili gönderiye, kategorilerden ilgili kategoriye ait paylaşımlara gidebiliyoruz.
+* Son yapılan yoruma tıklayarakta yorum yapılan bloga yönlendiriliyoruz.
 
 <br/>
 
