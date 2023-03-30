@@ -2,31 +2,46 @@
 
 @{
     ViewBag.Title = "About";
-    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    Layout = "~/Views/Layout/_BlogLayout.cshtml";
 }
 
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <body>
-    @foreach (var item in Model)
-    {
-        <div class="about-content">
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <div class="heading-page header-text">
+        <section class="page-heading">
             <div class="container">
-                <div class="about-section">
-                    <div class="about-grid">
-                        <img style="width: 800px; display: block; margin:auto" src="@item.ImageUrl" alt="" />
-                        <p style="margin-top:50px;">@item.Description</p>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-content">
+                            <h4>HAKKIMIZDA</h4>
+                            <h2>DAHA FAZLA BİLGİ!</h2>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
+    </div>
+
+    <!-- Banner Ends Here -->
+
+
+    <section class="about-us">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    @foreach (var item in Model)
+                    {
+                        <img src="@item.ImageUrl" alt="">
+                        <p>@item.Description</p>
+                        <p>@item.Description</p>
+                    }
+                </div>
+            </div>
         </div>
-    }
+    </section>
 </body>
 </html>

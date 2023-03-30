@@ -84,6 +84,7 @@ namespace MvcBlog.Controllers
         [HttpPost]
         public ActionResult UpdateBlog(TblBlog tblBlog)
         {
+            tblBlog.BlogDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             repository.Update(tblBlog);
             return RedirectToAction("Index");
         }
@@ -93,6 +94,18 @@ namespace MvcBlog.Controllers
             var value = repository.GetById(x => x.BlogId == id);
             ViewBag.BlogId = value.BlogId;
             return View(value);
+        }
+
+        public PartialViewResult BlogWithCategory(int id)
+        {
+            var values = repository.GetList(x => x.CategoryId == id);
+            return PartialView(values);
+        }
+
+        public ActionResult BlogGetList()
+        {
+            var values = repository.GetList();
+            return View(values);
         }
     }
 }

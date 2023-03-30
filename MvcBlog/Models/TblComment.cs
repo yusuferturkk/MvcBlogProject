@@ -19,6 +19,7 @@ namespace MvcBlog.Models
         public string Email { get; set; }
         public string CommentContent { get; set; }
         public Nullable<int> BlogId { get; set; }
+        public Nullable<System.DateTime> CommentDate { get; set; }
     
         public virtual TblBlog TblBlog { get; set; }
     }

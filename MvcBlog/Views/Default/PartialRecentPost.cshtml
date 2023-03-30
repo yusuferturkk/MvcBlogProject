@@ -1,8 +1,20 @@
 ﻿@model List<MvcBlog.Models.TblBlog>
 
-<ul>
-    @foreach (var item in Model)
-    {
-        <li><a href="/Blog/BlogDetail/@item.BlogId">@item.BlogTitle</a></li>
-    }
-</ul>
+<div class="sidebar-item recent-posts">
+    <div class="sidebar-heading">
+        <h2>SON PAYLAŞIMLAR</h2>
+    </div>
+    <div class="content">
+        <ul>
+            @foreach (var item in Model.OrderByDescending(x => x.BlogId).Take(6))
+            {
+                <li>
+                    <a href="/Blog/BlogDetail/@item.BlogId/">
+                        <h6>@item.BlogTitle</h6>
+                        <span>@(((DateTime)item.BlogDate).ToString("dd-MMM-yyyy"))</span>
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

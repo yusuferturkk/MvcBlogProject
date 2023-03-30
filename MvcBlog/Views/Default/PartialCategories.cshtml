@@ -1,8 +1,15 @@
 ﻿@model List<MvcBlog.Models.TblCategory>
 
-<ul>
-    @foreach (var item in Model)
-    {
-        <li><a href="/Blog/BlogWithCategory/@item.CategoryId">@item.CategoryName</a></li>
-    }
-</ul>
+<div class="sidebar-item tags">
+    <div class="sidebar-heading">
+        <h2>KATEGORİLER</h2>
+    </div>
+    <div class="content">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li><a href="/Blog/BlogWithCategory/@item.CategoryId"> @item.CategoryName</a></li>
+            }
+        </ul>
+    </div>
+</div>

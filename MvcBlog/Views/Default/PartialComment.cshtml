@@ -1,15 +1,23 @@
 ﻿@model List<MvcBlog.Models.TblComment>
 
-@foreach (var item in Model)
-{
-    <ul class="comment-list">
-        <li>
-            <div class="desc">
-                <img src="~/Templates/web/images/avatar.png" class="img-responsive" alt="">
-
-                <p><a href="#" title="Posts by admin" rel="author">@item.Username: </a></p> @item.CommentContent
-            </div>
-            <div class="clearfix"></div>
-        </li>
-    </ul>
-}
+<div class="sidebar-item comments">
+    <div class="sidebar-heading">
+        <h2>@ViewBag.totalComment Yorum</h2>
+    </div>
+    <div class="content">
+        <ul>
+            @foreach (var item in Model.OrderByDescending(x => x.CommentDate))
+            {
+                <li>
+                    <div class="author-thumb">
+                        <img src="~/Templates/BlogTemplate/assets/images/avatar.png" alt="">
+                    </div>
+                    <div class="right-content">
+                        <h4>@item.Username<span>@(((DateTime)item.CommentDate).ToString("dd-MMM-yyyy"))</span></h4>
+                        <p>@item.CommentContent</p>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

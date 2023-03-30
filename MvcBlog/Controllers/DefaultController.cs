@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace MvcBlog.Controllers
 {
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         
@@ -36,12 +37,16 @@ namespace MvcBlog.Controllers
         public PartialViewResult PartialComment(int id)
         {
             var values = commentRepository.GetList(x => x.BlogId == id);
+
+            ViewBag.totalComment = commentRepository.GetList().Where(x => x.BlogId == id).Count();
+
             return PartialView(values);
         }
 
         public PartialViewResult PartialRecentPost()
         {
             var values = blogRepository.GetList();
+
             return PartialView(values);
         }
 

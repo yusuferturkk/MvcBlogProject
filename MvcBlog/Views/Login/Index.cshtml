@@ -1,69 +1,68 @@
-﻿
+﻿@model MvcBlog.Models.TblAdmin
+
 @{
     Layout = null;
 }
 
-<!--A Design by W3layouts
-   Author: W3layout
-   Author URL: http://w3layouts.com
-   License: Creative Commons Attribution 3.0 Unported
-   License URL: http://creativecommons.org/licenses/by/3.0/
-   -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <title>Kullanıcı Giriş Paneli </title>
-    <!-- Meta tags -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Gaze Sign up & login Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
-    <script>
-         addEventListener("load", function () { setTimeout(hideURLbar, 0); }, false); function hideURLbar() { window.scrollTo(0, 1); }
-    </script>
-    <!-- Meta tags -->
-    <!--stylesheets-->
-    <link href="~/Templates/web2/css/style.css" rel='stylesheet' type='text/css' media="all">
-    <!--//style sheet end here-->
-    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+    <title>Admin Giriş Paneli</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="~/Templates/LoginTemplate/css/style.css">
+
 </head>
-<body>
-    <div class="mid-class">
-        <div class="art-right-w3ls">
-            <h2>Admin Panel Giriş Ekranı</h2>
-            <form action="#" method="post">
-                <div class="main">
-                    <div class="form-left-to-w3l">
-                        <input type="text" name="Username" placeholder="Kullanıcı Adı" required="">
+<body class="img js-fullheight" style="background-image: url(/Templates/LoginTemplate/images/bg.jpg);">
+    <section class="ftco-section">
+        <div class="container" style="margin-top:100px;">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">Mvc Cv Giriş Paneli</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="login-wrap p-0">
+                        <h3 class="mb-4 text-center">Bir hesabın var mı?</h3>
+                        <form method="post" class="signin-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Kullanıcı Adı" name="Username" required>
+                            </div>
+                            <div class="form-group">
+                                <input id="password-field" type="password" class="form-control" placeholder="*******" name="Password" required>
+                                <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+                            <h6 class="mb-4 text-center">@ViewBag.errorMessage</h6>
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn btn-primary submit px-3">Giriş Yap</button>
+                            </div>
+                            <div class="form-group d-md-flex">
+                                <div class="w-50">
+                                    <label class="checkbox-wrap checkbox-primary">
+                                        Beni Hatırla
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <div class="form-left-to-w3l ">
-                        <input type="password" name="Password" placeholder="******" required="">
-                        <div class="clear"></div>
-                    </div>
                 </div>
-                <div class="left-side-forget">
-                    <input type="checkbox" class="checked">
-                    <span class="remenber-me">Beni hatırla </span>
-                </div>
-                <div class="clear"></div>
-                <div class="btnn">
-                    <button type="submit">Giriş Yap</button>
-                </div>
-            </form>
+            </div>
         </div>
-        <div class="art-left-w3ls">
-            <h1 class="header-w3ls">
-                Film & Dizi
-            </h1><br />
-            <h1 class="header-w3ls">
-                Login Paneli
-            </h1>
-        </div>
-    </div>
-    <footer class="bottem-wthree-footer">
-        <p>
-            © 2023 Tüm Hakları Saklıdır .Net Framework Mvc Proje | Design by
-            <a href="http://www.W3Layouts.com" target="_blank">W3Layouts</a>
-        </p>
-    </footer>
+    </section>
+
+    <script src="~/Templates/LoginTemplate/js/jquery.min.js"></script>
+    <script src="~/Templates/LoginTemplate/js/popper.js"></script>
+    <script src="~/Templates/LoginTemplate/js/bootstrap.min.js"></script>
+    <script src="~/Templates/LoginTemplate/js/main.js"></script>
+
 </body>
 </html>
+

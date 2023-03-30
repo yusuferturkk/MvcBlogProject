@@ -1,11 +1,19 @@
 ﻿
-<div class="content-form" style="margin-top:100px;">
-    <h3>Yorum Yap</h3>
-    <form method="post" class="form-group">
-        <input name="BlogId" value="@ViewBag.BlogId" type="text" />
-        <input name="Username" type="text" placeholder="Kullanıcı Adı" required />
-        <input name="Email" type="text" placeholder="Mail Adresi" required />
-        <textarea name="CommentContent" placeholder="Mesajınızı giriniz.."></textarea>
-        <input type="submit" value="GÖNDER" />
-    </form>
+<div class="col-md-6 col-sm-12">
+    <fieldset>
+        <input name="BlogId" value="@ViewBag.BlogId" type="hidden" id="name" required="">
+    </fieldset>
+    <fieldset>
+        <input name="Username" type="text" id="name" placeholder="Kullanıcı Adı" required="">
+    </fieldset>
+</div>
+<div class="col-md-6 col-sm-12">
+    <fieldset>
+        <input name="Email" type="text" id="email" placeholder="Email Adresi" required="">
+    </fieldset>
+</div>
+<div class="col-lg-12">
+    <fieldset>
+        <textarea name="CommentContent" rows="6" id="message" placeholder="Mesajınız" required=""></textarea>
+    </fieldset>
 </div>

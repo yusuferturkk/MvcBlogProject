@@ -81,6 +81,7 @@ namespace MvcBlog.Controllers
         [HttpPost]
         public PartialViewResult DoComment(TblComment tblComment)
         {
+            tblComment.CommentDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             repository.Add(tblComment);
             return PartialView();
         }

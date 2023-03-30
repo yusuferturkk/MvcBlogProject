@@ -1,49 +1,116 @@
 ﻿
 @{
     ViewBag.Title = "Contact";
-    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    Layout = "~/Views/Layout/_BlogLayout.cshtml";
 }
 
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <body>
-    <!--/header-->
-    <div class="contact-content">
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <div class="heading-page header-text">
+        <section class="page-heading">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-content">
+                            <h4>İLETİŞİM</h4>
+                            <h2>ARAYI SOĞUTMAYALIM!</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Banner Ends Here -->
+
+
+    <section class="contact-us">
         <div class="container">
-            <div class="contact-info">
-                <h2>İLETİŞİM</h2>
-                <p>Blog sayfamızda bulunan film ve dizilere eklemek istediklerinizi veya yorumlarda yaşayacağınız herhangi bir promblem olursa bu panelden bizlere mesaj gönderebilirsiniz. Mesaj gönderme sırasında mutlaka mail adresinizi doğru bir şekilde yazın ki sizlere bu mail üzerinden dönüş yapabilelim.</p>
-            </div>
-            <div class="contact-details">
-                @Html.Action("AddContact", "Contact")
-            </div>
-            <div class="contact-details">
-                <div class="col-md-6 contact-map">
-                    <h4>BİZİ BURADA BULABİLİRSİNİZ</h4>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50036.74998737887!2d27.021105489650385!3d38.38838429085884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbdc3f593e08ab%3A0xe0c497f92491cc5c!2zQmFsw6dvdmEvxLB6bWly!5e0!3m2!1str!2str!4v1679959227511!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div class="col-md-6 company_address">
-                    <h4>BİZE ULAŞIN</h4>
-                    <p>Eğitim Mahallesi, Şükrü Tunar sokak</p><br />
-                    <p>Balçova - İzmir - Türkiye</p><br />
-                    <p>Telefon: +90 505 555 55 55</p><br />
-                    <p>Email: <a href="mailto:info@example.com">info@mycompany.com</a></p>
-                </div>
-                <div class="clearfix"></div>
-            </div>
+            <div class="row">
 
+                <div class="col-lg-12">
+                    <div class="down-contact">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="sidebar-item contact-form">
+                                    <div class="sidebar-heading">
+                                        <h2>Bize bir mesaj gönder</h2>
+                                    </div>
+                                    <div class="content">
+                                        <form id="contact" action="" method="post">
+                                            <div class="row">
+                                                <div class="col-md-6 col-sm-12">
+                                                    <fieldset>
+                                                        <input name="NameSurnam" type="text" id="name" placeholder="AD SOYAD" required="">
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-md-6 col-sm-12">
+                                                    <fieldset>
+                                                        <input name="Email" type="text" id="email" placeholder="EMAİL ADRESİ" required="">
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-md-12 col-sm-12">
+                                                    <fieldset>
+                                                        <input name="Subject" type="text" id="subject" placeholder="KONU">
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <fieldset>
+                                                        <textarea name="Message" rows="6" id="message" placeholder="MESAJINIZ" required=""></textarea>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <fieldset>
+                                                        <button type="submit" id="form-submit" class="main-button">MESAJI GÖNDER</button>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="sidebar-item contact-information">
+                                    <div class="sidebar-heading">
+                                        <h2>İLETİŞİM BİLGİLERİMİZ</h2>
+                                    </div>
+                                    <div class="content">
+                                        <ul>
+                                            <li>
+                                                <h5>+90 555 456 21 35</h5>
+                                                <span>TELEFON NUMARASI</span>
+                                            </li>
+                                            <li>
+                                                <h5>info@company.com</h5>
+                                                <span>MAİL ADRESİ</span>
+                                            </li>
+                                            <li>
+                                                <h5>
+                                                    Eğitim Mahallesi Balçova,
+                                                    <br>İzmir / Türkiye
+                                                </h5>
+                                                <span>AÇIK ADRES</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-lg-12">
+                    <div id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50036.74638324884!2d27.05612495!3d38.388389499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbdc3f593e08ab%3A0xe0c497f92491cc5c!2zQmFsw6dvdmEvxLB6bWly!5e0!3m2!1str!2str!4v1680179957516!5m2!1str!2str" width="100%" height="450" style="border:0;" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </div>
-    </div>
-    <!---->
+    </section>
 </body>
 </html>
-
 

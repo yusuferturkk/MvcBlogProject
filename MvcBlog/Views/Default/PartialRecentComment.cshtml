@@ -1,8 +1,20 @@
 ﻿@model List<MvcBlog.Models.TblComment>
 
-<ul>
-    @foreach (var item in Model)
-    {
-        <li><a href="/Blog/BlogDetail/@item.BlogId">@item.Username: </a><a href="#"> @item.CommentContent.Substring(0,20) ...</a></li>
-    }
-</ul>
+<div class="sidebar-item recent-posts">
+    <div class="sidebar-heading">
+        <h2>SON YORUMLAR</h2>
+    </div>
+    <div class="content">
+        <ul>
+            @foreach (var item in Model.OrderByDescending(x => x.BlogId).Take(6))
+            {
+                <li>
+                    <a href="/Blog/BlogDetail/@item.BlogId">
+                        <h6>@item.Username : @item.CommentContent</h6>
+                        <span>@item.TblBlog.BlogTitle</span>
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

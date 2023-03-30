@@ -2,51 +2,104 @@
 
 @{
     ViewBag.Title = "BlogDetail";
-    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    Layout = "~/Views/Layout/_BlogLayout.cshtml";
 }
 
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <body>
-    <div class="single">
-        <div class="container">
-            <div class="col-md-8 single-main">
-                <div class="single-grid">
-                    <img src="@Model.BlogImage" alt="" />
-                    <p>
-                        @Model.BlogContent
-                    </p>
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <div class="heading-page header-text">
+        <section class="page-heading">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-content">
+                            <h4>GÖNDERİ DETAYI</h4>
+                            <h2>TEKLİ BLOG GÖNDERİSİ</h2>
+                        </div>
+                    </div>
                 </div>
-                @Html.Action("PartialComment", "Default")
-                @Html.Action("DoComment", "Comment")
             </div>
-
-            <div class="col-md-4 side-content">
-                <div class="recent">
-                    <h3>SON PAYLAŞINLANLAR</h3>
-                    @Html.Action("PartialRecentPost", "Default")
-                </div>
-                <div class="comments">
-                    <h3>SON YORUMLAR</h3>
-                    @Html.Action("PartialRecentComment", "Default")
-                </div>
-                <div class="clearfix"></div>
-                <div class="categories">
-                    <h3>KATEGORİLER</h3>
-                    @Html.Action("PartialCategories", "Default")
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
+        </section>
     </div>
+
+    <!-- Banner Ends Here -->
+
+    <section class="blog-posts grid-system">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="all-blog-posts">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="blog-post">
+                                    <div class="blog-thumb">
+                                        <img src="@Model.BlogImage" alt="">
+                                    </div>
+                                    <div class="down-content">
+                                        <span>@Model.BlogTitle</span>
+                                        <ul class="post-info">
+                                            <li><a href="#">@(((DateTime)Model.BlogDate).ToString("dd-MMM-yyyy"))</a></li>
+                                            <li><a href="#">@Model.TblCategory.CategoryName </a></li>
+                                        </ul>
+                                        <p>
+                                            @Model.BlogContent
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+
+                                @Html.Action("PartialComment", "Default")
+
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="sidebar-item submit-comment">
+                                    <div class="sidebar-heading">
+                                        <h2>YORUM EKLE</h2>
+                                    </div>
+                                    <div class="content">
+                                        <form id="comment" action="#" method="post">
+                                            <div class="row">
+                                                @Html.Action("DoComment", "Comment")
+                                                <div class="col-lg-12">
+                                                    <fieldset>
+                                                        <button type="submit" id="form-submit" class="main-button">GÖNDER</button>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="sidebar">
+                        <div class="row">
+                            <div class="col-lg-12">
+
+                                @Html.Action("PartialRecentPost", "Default")
+
+                            </div>
+                            <div class="col-lg-12">
+
+                                @Html.Action("PartialCategories", "Default")
+
+                            </div>
+                            <div class="col-lg-12">
+
+                                @Html.Action("PartialRecentComment", "Default")
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
-
-
