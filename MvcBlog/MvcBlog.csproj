@@ -244,6 +244,14 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Templates\BlogTemplate\images\image-1.jpg" />
+    <Content Include="Templates\BlogTemplate\images\image-2.jpg" />
+    <Content Include="Templates\BlogTemplate\images\image-3.jpg" />
+    <Content Include="Templates\BlogTemplate\images\image-4.jpg" />
+    <Content Include="Templates\BlogTemplate\images\image-5.jpg" />
+    <Content Include="Templates\BlogTemplate\images\image-6.jpg" />
+    <Content Include="Templates\BlogTemplate\images\image-7.jpg" />
+    <Content Include="Templates\BlogTemplate\images\image-8.jpg" />
     <Content Include="Templates\LoginTemplate\css\bootstrap.min.css" />
     <Content Include="Templates\LoginTemplate\css\bootstrap\mixins\_border-radius.css" />
     <Content Include="Templates\LoginTemplate\css\bootstrap\mixins\_reset-text.css" />
